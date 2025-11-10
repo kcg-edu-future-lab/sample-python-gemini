@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - TZ=Asia/Tokyo
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
